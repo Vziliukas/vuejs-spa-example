@@ -26,17 +26,29 @@ export default [
       {
         path: '',
         name: 'About',
-        component: AboutEducation
+        component: AboutEducation,
+        meta: {
+          displayName: 'Apie Mane',
+          pageTitle: 'Apie Mane'
+        }
       },
       {
         path: 'career',
         name: 'AboutCarrer',
-        component: AboutCareer
+        component: AboutCareer,
+        meta: {
+          displayName: 'Apie Mane',
+          pageTitle: 'Apie Mane'
+        }
       },
       {
         path: 'skills',
         name: 'AboutSkills',
-        component: AboutSkills
+        component: AboutSkills,
+        meta: {
+          displayName: 'Apie Mane',
+          pageTitle: 'Apie Mane'
+        }
       }
     ]
   },
