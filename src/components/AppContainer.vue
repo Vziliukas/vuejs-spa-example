@@ -17,9 +17,8 @@ export default {
 .app-container {
   width: 100%;
   background-color: #fff;
-  border: 1px solid #979797;
   border-radius: 4px;
-  box-shadow: 0 2px 4px #000000;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 15);
   padding: 60px;
   padding-bottom: 112px;
 

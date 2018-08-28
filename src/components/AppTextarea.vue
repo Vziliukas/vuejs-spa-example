@@ -1,13 +1,22 @@
 <template>
   <div class="app-text-area">
     <label class="app-text-area__label">Zinute</label>
-    <textarea class="app-text-area__textarea" cols="30" rows="10"></textarea>
+    <textarea
+      class="app-text-area__textarea"
+      cols="30"
+      rows="10"
+      :value="msg"
+      @input="$emit('input', $event.target.value)"
+    ></textarea>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppTextField'
+  name: 'AppTextField',
+  props: {
+    msg: String
+  }
 }
 </script>
 

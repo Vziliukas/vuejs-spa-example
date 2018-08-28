@@ -1,13 +1,21 @@
 <template>
   <div class="app-text-field">
     <label class="app-text-field__label">Vardas</label>
-    <input class="app-text-field__input" type="text">
+    <input
+      class="app-text-field__input"
+      type="text"
+      :value="name"
+      @input="$emit('input', $event.target.value)"
+    >
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppTextField'
+  name: 'AppTextField',
+  props: {
+    name: String
+  }
 }
 </script>
 
