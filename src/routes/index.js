@@ -8,7 +8,7 @@ import Contacts from '@/views/Contacts'
 export default [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home,
     meta: {
       displayName: 'Home',
@@ -42,7 +42,7 @@ export default [
   },
   {
     path: '/contacts',
-    name: 'contacts',
+    name: 'Contacts',
     component: Contacts,
     meta: {
       displayName: 'Kontaktai',
