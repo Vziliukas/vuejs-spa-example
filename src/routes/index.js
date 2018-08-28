@@ -34,7 +34,7 @@ export default [
       },
       {
         path: 'career',
-        name: 'AboutCarrer',
+        name: 'AboutCareer',
         component: AboutCareer,
         meta: {
           displayName: 'Apie Mane',
