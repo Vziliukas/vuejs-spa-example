@@ -28,5 +28,9 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  &__container {
+    width: 310px;
+  }
 }
 </style>
