@@ -1,5 +1,7 @@
 import Home from '@/views/Home'
+import Gallery from '@/views/Gallery'
 import About from '@/views/About'
+import Posts from '@/views/Posts'
 import AboutEducation from '@/views/About/AboutEducation'
 import AboutCareer from '@/views/About/AboutCareer'
 import AboutSkills from '@/views/About/AboutSkills'
@@ -53,12 +55,30 @@ export default [
     ]
   },
   {
+    path: '/gallery',
+    name: 'Gallery',
+    component: Gallery,
+    meta: {
+      displayName: 'Gallery',
+      pageTitle: 'Gallery'
+    }
+  },
+  {
     path: '/contacts',
     name: 'Contacts',
     component: Contacts,
     meta: {
       displayName: 'Kontaktai',
       pageTitle: 'Kontaktai'
+    }
+  },
+  {
+    path: '/posts',
+    name: 'Posts',
+    component: Posts,
+    meta: {
+      displayName: 'Pranesimai',
+      pageTitle: 'Pranesimai'
     }
   }
 ]

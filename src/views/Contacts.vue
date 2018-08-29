@@ -5,13 +5,13 @@
     </div>
     <template v-if="!success">
       <div class="view-contacts__input">
-        <app-text-field v-model="name"/>
+        <app-text-field v-model="form.title"/>
       </div>
-      <app-textarea v-model="msg"/>
+      <app-textarea v-model="form.body"/>
       <app-button @click.native="handleSubmit"/>
     </template>
     <div v-else class="view-contacs-success">
-      <h3>{{ `Name: ${name}, Message: ${msg}` }}</h3>
+      <pre>{{ asyncData }}</pre>
     </div>
   </div>
 </template>
@@ -32,17 +32,27 @@ export default {
     return {
       isEmpty: false,
       success: false,
-      name: '',
-      msg: ''
+      form: {
+        title: '',
+        body: ''
+      },
+      asyncData: []
     }
   },
   methods: {
-    handleSubmit () {
-      if (this.name.length < 1 && this.msg.length < 1) {
+    async handleSubmit () {
+      if (this.form.title.length < 1 && this.form.body.length < 1) {
         this.isEmpty = true
       } else {
         this.isEmpty = false
-        this.success = true
+        const response = await this.axios.post('https://jsonplaceholder.typicode.com/posts', {
+          userId: 1,
+          ...this.form
+        })
+        if (response.status === 201) {
+          this.success = true
+          this.asyncData = response.data
+        }
       }
     }
   }

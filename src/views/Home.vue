@@ -1,13 +1,9 @@
 <template>
   <div class="view-home">
-    <div class="view-home__container">
-      <app-card/>
-    </div>
-    <div class="view-home__container">
-      <app-card/>
-    </div>
-    <div class="view-home__container">
-      <app-card/>
+    <div
+    v-for="(image, index) in images"
+    class="view-home__container" :key="index">
+      <app-card :image="image"/>
     </div>
   </div>
 </template>
@@ -19,6 +15,24 @@ export default {
   name: 'Home',
   components: {
     AppCard
+  },
+  data () {
+    return {
+      images: [
+        {
+          src: 'https://picsum.photos/200',
+          title: 'Grazus pavadinimas'
+        },
+        {
+          src: 'https://picsum.photos/200',
+          title: 'Grazus pavadinimas'
+        },
+        {
+          src: 'https://picsum.photos/200',
+          title: 'Grazus pavadinimas'
+        }
+      ]
+    }
   }
 }
 </script>

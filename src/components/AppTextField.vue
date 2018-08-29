@@ -1,10 +1,10 @@
 <template>
   <div class="app-text-field">
-    <label class="app-text-field__label">Vardas</label>
+    <label class="app-text-field__label">Pavadinimas</label>
     <input
       class="app-text-field__input"
       type="text"
-      :value="name"
+      :value="title"
       @input="$emit('input', $event.target.value)"
     >
   </div>
@@ -14,7 +14,7 @@
 export default {
   name: 'AppTextField',
   props: {
-    name: String
+    title: String
   }
 }
 </script>

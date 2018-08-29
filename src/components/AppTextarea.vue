@@ -5,7 +5,7 @@
       class="app-text-area__textarea"
       cols="30"
       rows="10"
-      :value="msg"
+      :value="body"
       @input="$emit('input', $event.target.value)"
     ></textarea>
   </div>
@@ -15,7 +15,7 @@
 export default {
   name: 'AppTextField',
   props: {
-    msg: String
+    body: String
   }
 }
 </script>

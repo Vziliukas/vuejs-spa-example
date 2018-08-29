@@ -1,15 +1,21 @@
 <template>
   <section class="app-card">
     <figure class="app-card__photo">
-      <img class="app-card__photo-img" src="https://picsum.photos/200" alt="">
+      <img class="app-card__photo-img" :src="image.src" alt="">
     </figure>
-    <h3 class="app-card__title">title</h3>
+    <h3 class="app-card__title">{{ image.title }}</h3>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'AppCard'
+  name: 'AppCard',
+  props: {
+    image: {
+      src: String,
+      title: String
+    }
+  }
 }
 </script>
 

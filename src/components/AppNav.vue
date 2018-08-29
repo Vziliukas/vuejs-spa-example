@@ -2,21 +2,35 @@
   <nav class="app-nav">
     <ul class="app-nav__list">
       <li class="app-nav__list-item">
-        <router-link 
-        :to="{name: 'Home'}" 
+        <router-link
+        :to="{name: 'Home'}"
         class="app-nav__list-link"
         exact-active-class="app-nav__list-link--active"
         >Namai</router-link>
       </li>
       <li class="app-nav__list-item">
-        <router-link 
+        <router-link
+        :to="{name: 'Gallery'}"
+        class="app-nav__list-link"
+        exact-active-class="app-nav__list-link--active"
+        >Gallery</router-link>
+      </li>
+      <li class="app-nav__list-item">
+        <router-link
+        :to="{name: 'Posts'}"
+        class="app-nav__list-link"
+        exact-active-class="app-nav__list-link--active"
+        >Pranesimai</router-link>
+      </li>
+      <li class="app-nav__list-item">
+        <router-link
         :to="{name: 'About'}"
         class="app-nav__list-link"
         exact-active-class="app-nav__list-link--active"
         >About</router-link>
       </li>
       <li class="app-nav__list-item">
-        <router-link 
+        <router-link
         :to="{name: 'Contacts'}"
         class="app-nav__list-link"
         exact-active-class="app-nav__list-link--active"
@@ -40,7 +54,7 @@ export default {
   padding-right: 121px;
 
   &__list {
-    width: 290px;
+    width: 400px;
     display: flex;
     list-style: none;
     justify-content: space-between;
